@@ -131,7 +131,6 @@ button {
   margin: auto;
   padding: 8px 16px;
   text-align: center;
-  text-decoration: none;
   display: block;
   transition-duration: 0.4s;
   color: #9C1F4D;
@@ -141,10 +140,13 @@ button {
   cursor: pointer;
   font-weight: 500;
 }
-
-#reel:hover {
+button:hover {
   background-color: #9C1F4D;
   color: white;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* PORTAFOLIO and LAB */
@@ -208,6 +210,7 @@ button {
   text-align: center;
 }
 
+/* PROYECTO */
 /* FOOTER */
 footer {
   position: relative;
