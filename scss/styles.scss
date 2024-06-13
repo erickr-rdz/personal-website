@@ -185,7 +185,8 @@ a{
 }
 
 #lab,
-#portfolio {
+#portfolio,
+#proyectoA {
     font-size: 3em;
     font-weight: lighter;
     text-align: center;
@@ -208,6 +209,7 @@ a{
         font-family: $font-sans-serif;
         font-weight: lighter;
         text-align: justify;
+        font-size: 1.2em;
     }
 
     .foto img {
@@ -228,7 +230,71 @@ a{
 }
 
 /* PROYECTO */
+.proyectoA {
+    .stills {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        img {
+            width: 100%;
+        }
+    }
 
+    p {
+        padding: 30px;
+        font-family: $font-sans-serif;
+        font-weight: lighter;
+        text-align: justify;
+        font-size: 1.3em;
+    }
+
+    .ficha {
+        height: 100vh;
+        align-content: center;
+
+        .info {
+            text-align: center;
+            padding: 5px;
+        }
+
+        h3 {
+            font-family: $font-sans-serif;
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+
+        h4 {
+            font-family: $font-sans-serif;
+            font-weight: lighter;
+            font-size: 1.2em;
+            line-height: 0%;
+        }
+    }
+
+    .laureles {
+        width: 80vw;
+        justify-content: center;
+
+        img {
+            width: 70%;
+            line-height: 0%;
+        }
+
+        h3 {
+            font-family: $font-sans-serif;
+            font-weight: 600;
+            font-size: 1em;
+            text-align: center;
+        }
+
+        h4 {
+            font-family: $font-sans-serif;
+            font-weight: lighter;
+            font-size: 1em;
+            text-align: center;
+        }
+    }
+}
 
 /* FOOTER */
 footer {
@@ -381,7 +447,6 @@ footer {
     .aboutme {
         display: grid;
         grid-template-columns: 50% 50%;
-        grid-template-rows: 80% 5% 15%;
         grid-template-areas:
             "bio foto"
             ". ."
@@ -404,13 +469,39 @@ footer {
             align-content: center;
         }
 
+        .foto{
+            grid-area: foto;
+        }
+
         .cita {
             grid-area: cita;
+            padding: 30px;
+            align-content: center;
+        }
+
+        span{
+            font-weight: bold;
         }
     }
 
     .gallery {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .proyectoA {
+        .ficha, 
+        .laureles {
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 30px;
+
+            img {
+                width: 150px;
+            }
+        } 
+        
     }
 
     footer {
