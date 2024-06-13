@@ -1,0 +1,376 @@
+@charset "UTF-8";
+/* Variables */
+/* Estilos base para dispositivos móviles (mobile-first) */
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "Kaisei Decol", serif;
+  background-color: transparent;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+header {
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(white, transparent);
+}
+
+/* MENÚ */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  font-family: "Afacad", sans-serif;
+  margin: auto;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  transition-duration: 0.4s;
+  color: #9C1F4D;
+  background-color: transparent;
+  border: 2px solid #9C1F4D;
+  border-radius: 32px;
+  cursor: pointer;
+}
+
+#menu {
+  background-color: rgba(245, 245, 245, 0.8);
+  backdrop-filter: blur(5px);
+  text-transform: uppercase;
+  font-size: 2em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Afacad", sans-serif;
+  font-weight: 500;
+}
+#menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#menu ul li {
+  margin: 2px 0;
+}
+#menu ul li a {
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+  color: #9C1F4D;
+  margin: 20px;
+}
+#menu ul li a:hover {
+  background-color: #9C1F4D;
+  color: white;
+  transition-duration: 0.4s;
+}
+
+#menu-toggle:checked + label + #menu {
+  display: flex;
+}
+
+/* MAIN */
+main {
+  width: 100%;
+  margin: auto;
+  align-content: center;
+  justify-content: center;
+  height: auto;
+  padding: 20px;
+  position: relative;
+}
+
+.index {
+  height: calc(100vh - 100px);
+}
+
+#erickrdz {
+  text-align: center;
+  font-family: "Kaisei Decol", serif;
+  font-size: 4em;
+  font-weight: 100;
+  line-height: 0%;
+}
+
+#firma {
+  text-align: center;
+  font-family: "Afacad", sans-serif;
+  font-size: 1.2em;
+  font-weight: 100;
+}
+
+button {
+  margin: auto;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  transition-duration: 0.4s;
+  color: #9C1F4D;
+  background-color: transparent;
+  border: 2px solid #9C1F4D;
+  border-radius: 32px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+#reel:hover {
+  background-color: #9C1F4D;
+  color: white;
+}
+
+/* PORTAFOLIO and LAB */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.gallery div {
+  background: #3a3f51;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
+  height: max-content;
+}
+.gallery div video,
+.gallery div img {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#lab,
+#portfolio {
+  font-size: 3em;
+  font-weight: lighter;
+  text-align: center;
+  line-height: 2em;
+}
+
+/* SOBRE MI */
+.aboutme {
+  display: flex;
+  flex-flow: column;
+  padding: 20px;
+}
+.aboutme h1 {
+  font-size: 3em;
+  font-weight: lighter;
+  text-align: center;
+}
+.aboutme p {
+  font-family: "Afacad", sans-serif;
+  font-weight: lighter;
+  text-align: justify;
+}
+.aboutme .foto img {
+  max-width: 100%;
+  height: auto;
+}
+.aboutme .foto {
+  grid-area: foto;
+  align-content: center;
+}
+.aboutme .cita {
+  font-style: italic;
+  column-span: all;
+  text-align: center;
+}
+
+/* FOOTER */
+footer {
+  position: relative;
+  bottom: 0;
+  line-height: 0;
+  background-image: linear-gradient(transparent, white, white);
+  width: 100%;
+  height: 150px;
+  color: #000000;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Afacad", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  margin: auto;
+}
+footer .dropdown {
+  margin: 10px 0;
+  display: inline-block;
+}
+footer .dropdown .content {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  align-content: center;
+  color: #9C1F4D;
+  padding: 20px;
+  border-radius: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  margin: auto;
+  background-color: rgba(245, 245, 245, 0.8);
+  backdrop-filter: blur(5px);
+}
+footer .dropdown .content form input,
+footer .dropdown .content form textarea {
+  width: calc(100% - 20px);
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+footer .dropdown .content form input[type=submit] {
+  margin: 10px auto;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  transition-duration: 0.4s;
+  color: #9C1F4D;
+  background-color: transparent;
+  border: 2px solid #9C1F4D;
+  border-radius: 32px;
+  cursor: pointer;
+}
+footer .dropdown:hover .content {
+  display: block;
+}
+
+/* Media Queries para computadoras de escritorio */
+@media (min-width: 1024px) {
+  header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    align-content: center;
+    margin: auto;
+    top: 0;
+    background-image: linear-gradient(white, white, transparent);
+  }
+  header h1 {
+    margin: 0;
+  }
+  .menu-icon {
+    display: none;
+  }
+  main {
+    top: 100px;
+    margin: auto;
+    width: 70%;
+    height: calc(100vh - 100px);
+  }
+  #erickrdz {
+    font-size: 7em;
+  }
+  #firma {
+    font-size: 1.8em;
+  }
+  #menu {
+    background: none;
+    backdrop-filter: none;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    font-size: 0.8em;
+  }
+  #menu ul {
+    flex-direction: row;
+    justify-content: center;
+    padding: auto;
+    margin: auto;
+  }
+  #menu ul li {
+    margin: 0;
+  }
+  #menu ul li a {
+    display: inline-flex;
+    padding: 5px 50px;
+    margin: 0;
+    color: #9C1F4D;
+    border-color: #9C1F4D;
+    border-width: 2px;
+    border-style: solid;
+    text-decoration: none;
+  }
+  #menuHome {
+    border-radius: 20px 0 0 20px;
+  }
+  #menuAboutme {
+    border-radius: 0 20px 20px 0;
+  }
+  .aboutme {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 80% 5% 15%;
+    grid-template-areas: "bio foto" ". ." "cita cita";
+  }
+  .aboutme h1 {
+    font-size: 3em;
+    font-weight: lighter;
+    text-align: center;
+  }
+  .aboutme p {
+    font-family: "Afacad", sans-serif;
+    font-weight: lighter;
+    text-align: justify;
+  }
+  .aboutme .bio {
+    grid-area: bio;
+    align-content: center;
+  }
+  .aboutme .cita {
+    grid-area: cita;
+  }
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  footer {
+    bottom: -100px;
+    width: 100%;
+    font-size: 14px;
+    margin: auto;
+  }
+  footer .dropdown .content {
+    width: 70%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
