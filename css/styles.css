@@ -106,16 +106,29 @@ main {
   height: auto;
   padding: 20px;
   position: relative;
-  background-color: antiquewhite;
 }
-
-.titulo {
-  background-color: #3a3f51;
-}
-.titulo h1 {
+main .titulo h1 {
   font-size: 3em;
   font-weight: lighter;
   text-align: center;
+}
+main p {
+  font-family: "Afacad", sans-serif;
+  font-weight: lighter;
+  text-align: justify;
+  font-size: 1.2em;
+}
+main ul {
+  font-family: "Afacad", sans-serif;
+}
+main li::marker {
+  color: #9C1F4D;
+}
+main h3 {
+  font-size: 1.5em;
+}
+main span {
+  font-weight: bold;
 }
 
 button {
@@ -210,61 +223,66 @@ a {
 }
 
 /* mobile PROYECTO */
-.proyectoA .stills {
+.Esposas .stills {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
-.proyectoA .stills img {
+.Esposas .stills img {
   width: 100%;
 }
-.proyectoA p {
+.Esposas p {
   padding: 30px;
   font-family: "Afacad", sans-serif;
   font-weight: lighter;
   text-align: justify;
   font-size: 1.3em;
 }
-.proyectoA .ficha {
+.Esposas .ficha {
   height: 100vh;
   align-content: center;
 }
-.proyectoA .ficha .info {
+.Esposas .ficha .info {
   text-align: center;
   padding: 5px;
 }
-.proyectoA .ficha h3 {
+.Esposas .ficha h3 {
   font-family: "Afacad", sans-serif;
   font-weight: 600;
   font-size: 1.2em;
 }
-.proyectoA .ficha h4 {
+.Esposas .ficha h4 {
   font-family: "Afacad", sans-serif;
   font-weight: lighter;
   font-size: 1.2em;
   line-height: 0%;
 }
-.proyectoA .laureles {
+.Esposas .laureles {
   width: 80vw;
   justify-content: center;
   margin: auto;
 }
-.proyectoA .laureles img {
+.Esposas .laureles img {
   width: 70%;
   line-height: 0%;
   justify-content: center; /* (No entiendo por qué no se centran las imágenes) */
 }
-.proyectoA .laureles h3 {
+.Esposas .laureles h3 {
   font-family: "Afacad", sans-serif;
   font-weight: 600;
   font-size: 1em;
   text-align: center;
 }
-.proyectoA .laureles h4 {
+.Esposas .laureles h4 {
   font-family: "Afacad", sans-serif;
   font-weight: lighter;
   font-size: 1em;
   text-align: center;
+}
+
+/* mobile AVISO */
+.avisoPrivacidad {
+  height: auto;
 }
 
 /* mobile FOOTER */
@@ -404,16 +422,6 @@ footer .dropdown:hover .content {
     grid-template-columns: 50% 50%;
     grid-template-areas: "bio foto" ". ." "cita cita";
   }
-  .aboutme h1 {
-    font-size: 3em;
-    font-weight: lighter;
-    text-align: center;
-  }
-  .aboutme p {
-    font-family: "Afacad", sans-serif;
-    font-weight: lighter;
-    text-align: justify;
-  }
   .aboutme .bio {
     grid-area: bio;
     align-content: center;
@@ -426,16 +434,13 @@ footer .dropdown:hover .content {
     padding: 30px;
     align-content: center;
   }
-  .aboutme span {
-    font-weight: bold;
-  }
   /* desktop PORTAFOLIO and LAB */
   .gallery {
     grid-template-columns: repeat(3, 1fr);
   }
   /* desktop PROYECTO */
-  .proyectoA .ficha,
-  .proyectoA .laureles {
+  .Esposas .ficha,
+  .Esposas .laureles {
     height: auto;
     display: flex;
     flex-direction: row;
@@ -443,8 +448,8 @@ footer .dropdown:hover .content {
     margin: auto;
     margin-bottom: 30px;
   }
-  .proyectoA .ficha img,
-  .proyectoA .laureles img {
+  .Esposas .ficha img,
+  .Esposas .laureles img {
     width: 150px;
   }
   /* desktop FOOTER */

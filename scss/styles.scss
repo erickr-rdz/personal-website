@@ -115,15 +115,36 @@ main {
     height: auto;
     padding: 20px;
     position: relative;
-    background-color: antiquewhite;
-}
 
-.titulo {
-    background-color: #3a3f51;
-    h1{
-        font-size: 3em;
+    .titulo {
+        h1{
+            font-size: 3em;
+            font-weight: lighter;
+            text-align: center;
+        }
+    }
+
+    p {
+        font-family: $font-sans-serif;
         font-weight: lighter;
-        text-align: center;
+        text-align: justify;
+        font-size: 1.2em;
+    }
+
+    ul {
+        font-family: $font-sans-serif;
+    }
+
+    li::marker {
+        color: $primary-color
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    span {
+        font-weight: bold;
     }
 }
 
@@ -226,7 +247,7 @@ a{
 }
 
 /* mobile PROYECTO */
-.proyectoA {
+.Esposas {
     .stills {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -293,6 +314,11 @@ a{
             text-align: center;
         }
     }
+}
+
+/* mobile AVISO */
+.avisoPrivacidad {
+    height: auto;
 }
 
 /* mobile FOOTER */
@@ -455,18 +481,6 @@ footer {
             ". ."
             "cita cita";
 
-        h1 {
-            font-size: 3em;
-            font-weight: lighter;
-            text-align: center;
-        }
-
-        p {
-            font-family: $font-sans-serif;
-            font-weight: lighter;
-            text-align: justify;
-        }
-
         .bio {
             grid-area: bio;
             align-content: center;
@@ -481,10 +495,6 @@ footer {
             padding: 30px;
             align-content: center;
         }
-
-        span{
-            font-weight: bold;
-        }
     }
 
 /* desktop PORTAFOLIO and LAB */
@@ -493,7 +503,7 @@ footer {
     }
 
 /* desktop PROYECTO */
-    .proyectoA {
+    .Esposas {
         .ficha, 
         .laureles {
             height: auto;
