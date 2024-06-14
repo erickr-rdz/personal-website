@@ -274,10 +274,12 @@ a{
     .laureles {
         width: 80vw;
         justify-content: center;
+        margin: auto;
 
         img {
             width: 70%;
             line-height: 0%;
+            justify-content: center; /* (No entiendo por qué no se centran las imágenes) */
         }
 
         h3 {
@@ -495,14 +497,14 @@ footer {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            margin: auto;
             margin-bottom: 30px;
 
             img {
                 width: 150px;
-            }
+            } 
         } 
-        
-    }
+}
 
     footer {
         bottom: -100px;

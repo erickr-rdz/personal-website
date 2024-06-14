@@ -250,10 +250,12 @@ a {
 .proyectoA .laureles {
   width: 80vw;
   justify-content: center;
+  margin: auto;
 }
 .proyectoA .laureles img {
   width: 70%;
   line-height: 0%;
+  justify-content: center; /* (No entiendo por qué no se centran las imágenes) */
 }
 .proyectoA .laureles h3 {
   font-family: "Afacad", sans-serif;
@@ -435,6 +437,7 @@ footer .dropdown:hover .content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: auto;
     margin-bottom: 30px;
   }
   .proyectoA .ficha img,
