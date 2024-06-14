@@ -169,6 +169,10 @@ button {
 
 a{
     text-decoration: none;
+
+    &:visited {
+        text-decoration: none;
+    }
 }
 
 /* mobile HOME */
@@ -325,10 +329,8 @@ a{
 footer {
     position: relative;
     bottom: 0;
-    line-height: 0;
-    background-image: linear-gradient(transparent, white, white);
     width: 100%;
-    height: 150px;
+    height: 100vh;
     color: #000000;
     text-align: center;
     display: flex;
@@ -336,13 +338,14 @@ footer {
     align-items: center;
     justify-content: center;
     font-family: $font-sans-serif;
-    font-weight: 500;
-    font-size: 14px;
+    font-size: 1em;
     margin: auto;
 
     .dropdown {
-        margin: 10px 0;
+        width: 100%;
+        height: 10%;
         display: inline-block;
+        align-content: center;
 
         .content {
             display: none;
@@ -362,6 +365,14 @@ footer {
             backdrop-filter: blur(5px);
 
             form {
+                fieldset {
+                    border: none;
+                }
+
+                legend {
+                    font-size: 1.5em;
+                    line-height: 3em;
+                }
 
                 input,
                 textarea {
@@ -388,9 +399,33 @@ footer {
             }
         }
 
-        &:hover .content {
-            display: block;
+        
+        
+    }
+
+    .dropdown:hover .content {
+        display: block;
+}
+
+    .rrss {
+        width: 100%;
+        height: 20%;
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+
+        img {
+            height: 30px;
+            margin: auto;
         }
+    }
+
+    .legal {
+        height: 20%;
+        width: 100%;
+        align-content: center;
     }
 }
 
@@ -522,12 +557,40 @@ footer {
 /* desktop FOOTER */
     footer {
         bottom: -100px;
+        height: 200px;
         width: 100%;
-        font-size: 14px;
+        font-size: 1em;
         margin: auto;
+        display: block;
 
-        .dropdown .content {
+        .dropdown {
+        height: 60%;
+        }
+
+        fieldset {
+            margin: auto;
+            width: 50%;
+        }
+
+        .rrss {
+            position: relative;
             width: 70%;
+            margin: auto;
+            justify-content: space-evenly;
+        }
+
+        .legal {
+            width: 70%;
+            height: 50%;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+
+            img {
+                height: 20px;
+            }
         }
     }
 }
