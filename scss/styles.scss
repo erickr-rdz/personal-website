@@ -22,6 +22,7 @@ body {
     box-sizing: inherit;
 }
 
+/* mobile HEADER */
 header {
     z-index: 1000;
     position: sticky;
@@ -37,7 +38,6 @@ header {
     background-image: linear-gradient(white, transparent);
 }
 
-/* MENÚ */
 #menu-toggle {
     display: none;
 }
@@ -106,7 +106,7 @@ header {
     display: flex;
 }
 
-/* MAIN */
+/* mobile MAIN */
 main {
     width: 100%;
     margin: auto;
@@ -115,25 +115,16 @@ main {
     height: auto;
     padding: 20px;
     position: relative;
+    background-color: antiquewhite;
 }
 
-.index {
-    height: $main-height;
-}
-
-#erickrdz {
-    text-align: center;
-    font-family: $font-serif;
-    font-size: 4em;
-    font-weight: 100;
-    line-height: 0%;
-}
-
-#firma {
-    text-align: center;
-    font-family: $font-sans-serif;
-    font-size: 1.2em;
-    font-weight: 100;
+.titulo {
+    background-color: #3a3f51;
+    h1{
+        font-size: 3em;
+        font-weight: lighter;
+        text-align: center;
+    }
 }
 
 button {
@@ -159,7 +150,27 @@ a{
     text-decoration: none;
 }
 
-/* PORTAFOLIO and LAB */
+/* mobile HOME */
+.index {
+    height: $main-height;
+}
+
+#erickrdz {
+    text-align: center;
+    font-family: $font-serif;
+    font-size: 4em;
+    font-weight: 100;
+    line-height: 0%;
+}
+
+#firma {
+    text-align: center;
+    font-family: $font-sans-serif;
+    font-size: 1.2em;
+    font-weight: 100;
+}
+
+/* mobile PORTAFOLIO and LAB */
 .gallery {
     display: grid;
     grid-template-columns: 1fr;
@@ -184,26 +195,11 @@ a{
     }
 }
 
-#lab,
-#portfolio,
-#proyectoA {
-    font-size: 3em;
-    font-weight: lighter;
-    text-align: center;
-    line-height: 2em;
-}
-
-/* SOBRE MI */
+/* mobile SOBRE MI */
 .aboutme {
     display: flex;
     flex-flow: column;
     padding: 20px;
-
-    h1 {
-        font-size: 3em;
-        font-weight: lighter;
-        text-align: center;
-    }
 
     p {
         font-family: $font-sans-serif;
@@ -212,14 +208,14 @@ a{
         font-size: 1.2em;
     }
 
-    .foto img {
-        max-width: 100%;
-        height: auto;
-    }
-
     .foto {
         grid-area: foto;
         align-content: center;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     }
 
     .cita {
@@ -229,12 +225,13 @@ a{
     }
 }
 
-/* PROYECTO */
+/* mobile PROYECTO */
 .proyectoA {
     .stills {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
+
         img {
             width: 100%;
         }
@@ -298,7 +295,7 @@ a{
     }
 }
 
-/* FOOTER */
+/* mobile FOOTER */
 footer {
     position: relative;
     bottom: 0;
@@ -373,6 +370,7 @@ footer {
 
 /* Media Queries para computadoras de escritorio */
 @media (min-width: 1024px) {
+/* desktop HEADER */
     header {
         position: fixed;
         width: 100%;
@@ -389,21 +387,6 @@ footer {
 
     .menu-icon {
         display: none;
-    }
-
-    main {
-        top: 100px;
-        margin: auto;
-        width: 70%;
-        height: $main-height;
-    }
-
-    #erickrdz{
-        font-size: 7em;
-    }
-
-    #firma{
-        font-size: 1.8em;
     }
 
     #menu {
@@ -446,6 +429,24 @@ footer {
         border-radius: 0 20px 20px 0;
     }
 
+/* desktop MAIN */
+    main {
+        top: 100px;
+        margin: auto;
+        width: 70%;
+        height: $main-height;
+    }
+
+/* desktop HOME */
+    #erickrdz {
+        font-size: 7em;
+    }
+
+    #firma {
+        font-size: 1.8em;
+    }
+
+/* desktop SOBRE MI */
     .aboutme {
         display: grid;
         grid-template-columns: 50% 50%;
@@ -486,10 +487,12 @@ footer {
         }
     }
 
+/* desktop PORTAFOLIO and LAB */
     .gallery {
         grid-template-columns: repeat(3, 1fr);
     }
 
+/* desktop PROYECTO */
     .proyectoA {
         .ficha, 
         .laureles {
@@ -506,6 +509,7 @@ footer {
         } 
 }
 
+/* desktop FOOTER */
     footer {
         bottom: -100px;
         width: 100%;

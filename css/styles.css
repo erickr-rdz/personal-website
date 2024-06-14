@@ -17,6 +17,7 @@ body {
   box-sizing: inherit;
 }
 
+/* mobile HEADER */
 header {
   z-index: 1000;
   position: sticky;
@@ -32,7 +33,6 @@ header {
   background-image: linear-gradient(white, transparent);
 }
 
-/* MENÚ */
 #menu-toggle {
   display: none;
 }
@@ -97,7 +97,7 @@ header {
   display: flex;
 }
 
-/* MAIN */
+/* mobile MAIN */
 main {
   width: 100%;
   margin: auto;
@@ -106,25 +106,16 @@ main {
   height: auto;
   padding: 20px;
   position: relative;
+  background-color: antiquewhite;
 }
 
-.index {
-  height: calc(100vh - 100px);
+.titulo {
+  background-color: #3a3f51;
 }
-
-#erickrdz {
+.titulo h1 {
+  font-size: 3em;
+  font-weight: lighter;
   text-align: center;
-  font-family: "Kaisei Decol", serif;
-  font-size: 4em;
-  font-weight: 100;
-  line-height: 0%;
-}
-
-#firma {
-  text-align: center;
-  font-family: "Afacad", sans-serif;
-  font-size: 1.2em;
-  font-weight: 100;
 }
 
 button {
@@ -149,7 +140,27 @@ a {
   text-decoration: none;
 }
 
-/* PORTAFOLIO and LAB */
+/* mobile HOME */
+.index {
+  height: calc(100vh - 100px);
+}
+
+#erickrdz {
+  text-align: center;
+  font-family: "Kaisei Decol", serif;
+  font-size: 4em;
+  font-weight: 100;
+  line-height: 0%;
+}
+
+#firma {
+  text-align: center;
+  font-family: "Afacad", sans-serif;
+  font-size: 1.2em;
+  font-weight: 100;
+}
+
+/* mobile PORTAFOLIO and LAB */
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
@@ -172,25 +183,11 @@ a {
   display: block;
 }
 
-#lab,
-#portfolio,
-#proyectoA {
-  font-size: 3em;
-  font-weight: lighter;
-  text-align: center;
-  line-height: 2em;
-}
-
-/* SOBRE MI */
+/* mobile SOBRE MI */
 .aboutme {
   display: flex;
   flex-flow: column;
   padding: 20px;
-}
-.aboutme h1 {
-  font-size: 3em;
-  font-weight: lighter;
-  text-align: center;
 }
 .aboutme p {
   font-family: "Afacad", sans-serif;
@@ -198,13 +195,13 @@ a {
   text-align: justify;
   font-size: 1.2em;
 }
-.aboutme .foto img {
-  max-width: 100%;
-  height: auto;
-}
 .aboutme .foto {
   grid-area: foto;
   align-content: center;
+}
+.aboutme .foto img {
+  max-width: 100%;
+  height: auto;
 }
 .aboutme .cita {
   font-style: italic;
@@ -212,7 +209,7 @@ a {
   text-align: center;
 }
 
-/* PROYECTO */
+/* mobile PROYECTO */
 .proyectoA .stills {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -270,7 +267,7 @@ a {
   text-align: center;
 }
 
-/* FOOTER */
+/* mobile FOOTER */
 footer {
   position: relative;
   bottom: 0;
@@ -337,6 +334,7 @@ footer .dropdown:hover .content {
 
 /* Media Queries para computadoras de escritorio */
 @media (min-width: 1024px) {
+  /* desktop HEADER */
   header {
     position: fixed;
     width: 100%;
@@ -351,18 +349,6 @@ footer .dropdown:hover .content {
   }
   .menu-icon {
     display: none;
-  }
-  main {
-    top: 100px;
-    margin: auto;
-    width: 70%;
-    height: calc(100vh - 100px);
-  }
-  #erickrdz {
-    font-size: 7em;
-  }
-  #firma {
-    font-size: 1.8em;
   }
   #menu {
     background: none;
@@ -398,6 +384,21 @@ footer .dropdown:hover .content {
   #menuAboutme {
     border-radius: 0 20px 20px 0;
   }
+  /* desktop MAIN */
+  main {
+    top: 100px;
+    margin: auto;
+    width: 70%;
+    height: calc(100vh - 100px);
+  }
+  /* desktop HOME */
+  #erickrdz {
+    font-size: 7em;
+  }
+  #firma {
+    font-size: 1.8em;
+  }
+  /* desktop SOBRE MI */
   .aboutme {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -428,9 +429,11 @@ footer .dropdown:hover .content {
   .aboutme span {
     font-weight: bold;
   }
+  /* desktop PORTAFOLIO and LAB */
   .gallery {
     grid-template-columns: repeat(3, 1fr);
   }
+  /* desktop PROYECTO */
   .proyectoA .ficha,
   .proyectoA .laureles {
     height: auto;
@@ -444,6 +447,7 @@ footer .dropdown:hover .content {
   .proyectoA .laureles img {
     width: 150px;
   }
+  /* desktop FOOTER */
   footer {
     bottom: -100px;
     width: 100%;
