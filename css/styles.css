@@ -226,57 +226,57 @@ a:visited {
 }
 
 /* mobile PROYECTO */
-.Esposas .stills {
+.esposas .stills {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
-.Esposas .stills img {
+.esposas .stills img {
   width: 100%;
 }
-.Esposas p {
+.esposas p {
   padding: 30px;
   font-family: "Afacad", sans-serif;
   font-weight: lighter;
   text-align: justify;
   font-size: 1.3em;
 }
-.Esposas .ficha {
+.esposas .ficha {
   height: 100vh;
   align-content: center;
 }
-.Esposas .ficha .info {
+.esposas .ficha .info {
   text-align: center;
   padding: 5px;
 }
-.Esposas .ficha h3 {
+.esposas .ficha h3 {
   font-family: "Afacad", sans-serif;
   font-weight: 600;
   font-size: 1.2em;
 }
-.Esposas .ficha h4 {
+.esposas .ficha h4 {
   font-family: "Afacad", sans-serif;
   font-weight: lighter;
   font-size: 1.2em;
   line-height: 0%;
 }
-.Esposas .laureles {
+.esposas .laureles {
   width: 80vw;
   justify-content: center;
   margin: auto;
 }
-.Esposas .laureles img {
+.esposas .laureles img {
   width: 70%;
   line-height: 0%;
   justify-content: center; /* (No entiendo por qué no se centran las imágenes) */
 }
-.Esposas .laureles h3 {
+.esposas .laureles h3 {
   font-family: "Afacad", sans-serif;
   font-weight: 600;
   font-size: 1em;
   text-align: center;
 }
-.Esposas .laureles h4 {
+.esposas .laureles h4 {
   font-family: "Afacad", sans-serif;
   font-weight: lighter;
   font-size: 1em;
@@ -290,11 +290,9 @@ a:visited {
 
 /* mobile FOOTER */
 footer {
-  position: relative;
-  bottom: 0;
   width: 100%;
-  height: 100vh;
-  color: #000000;
+  position: relative;
+  height: calc(100vh - 100px);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -302,51 +300,27 @@ footer {
   justify-content: center;
   font-family: "Afacad", sans-serif;
   font-size: 1em;
-  margin: auto;
 }
-footer .dropdown {
-  width: 100%;
-  height: 10%;
-  display: inline-block;
+footer .content {
+  width: 90%;
   align-content: center;
 }
-footer .dropdown .content {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  align-content: center;
-  color: #9C1F4D;
-  padding: 20px;
-  border-radius: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  margin: auto;
-  background-color: rgba(245, 245, 245, 0.8);
-  backdrop-filter: blur(5px);
-}
-footer .dropdown .content form fieldset {
+footer .content form fieldset {
   border: none;
 }
-footer .dropdown .content form legend {
-  font-size: 1.5em;
-  line-height: 3em;
-}
-footer .dropdown .content form input,
-footer .dropdown .content form textarea {
-  width: calc(100% - 20px);
+footer .content form fieldset input,
+footer .content form fieldset textarea {
+  width: 100%;
+  border-style: none none solid none;
+  border-width: 1px;
+  text-decoration: none;
   margin: 5px 0;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: 5px 0;
 }
-footer .dropdown .content form input[type=submit] {
-  margin: 10px auto;
+footer .content form fieldset input[type=submit] {
+  margin: auto;
   padding: 8px 16px;
   text-align: center;
-  text-decoration: none;
   display: block;
   transition-duration: 0.4s;
   color: #9C1F4D;
@@ -354,26 +328,22 @@ footer .dropdown .content form input[type=submit] {
   border: 2px solid #9C1F4D;
   border-radius: 32px;
   cursor: pointer;
+  font-weight: 500;
 }
-footer .dropdown:hover .content {
-  display: block;
+footer .content form fieldset input[type=submit]:hover {
+  background-color: #9C1F4D;
+  color: white;
 }
 footer .rrss {
   width: 100%;
   height: 20%;
-  justify-content: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   justify-content: space-around;
+  align-content: center;
 }
 footer .rrss img {
   height: 30px;
-  margin: auto;
 }
 footer .legal {
-  height: 20%;
-  width: 100%;
   align-content: center;
 }
 
@@ -466,8 +436,8 @@ footer .legal {
     grid-template-columns: repeat(3, 1fr);
   }
   /* desktop PROYECTO */
-  .Esposas .ficha,
-  .Esposas .laureles {
+  .esposas .ficha,
+  .esposas .laureles {
     height: auto;
     display: flex;
     flex-direction: row;
@@ -475,43 +445,40 @@ footer .legal {
     margin: auto;
     margin-bottom: 30px;
   }
-  .Esposas .ficha img,
-  .Esposas .laureles img {
+  .esposas .ficha img,
+  .esposas .laureles img {
     width: 150px;
   }
   /* desktop FOOTER */
   footer {
-    bottom: -100px;
-    height: 200px;
+    height: 300px;
     width: 100%;
     font-size: 1em;
     margin: auto;
-    display: block;
-  }
-  footer .dropdown {
-    height: 60%;
-  }
-  footer fieldset {
-    margin: auto;
-    width: 50%;
-  }
-  footer .rrss {
-    position: relative;
-    width: 70%;
-    margin: auto;
-    justify-content: space-evenly;
-  }
-  footer .legal {
-    width: 70%;
-    height: 50%;
-    margin: auto;
     display: flex;
     flex-direction: row;
-    align-items: center;
+  }
+  footer .content {
+    width: 30vw;
+  }
+  footer fieldset {
+    width: 90%;
+    margin: auto;
+    border: none;
+    justify-content: left;
+  }
+  footer .rrss {
+    width: 30vw;
+    margin: auto;
     justify-content: space-evenly;
   }
-  footer .legal img {
-    height: 20px;
+  footer .rrss img {
+    height: 30px;
+  }
+  footer .legal {
+    width: 30vw;
+    margin: auto;
+    align-items: center;
   }
 }
 
