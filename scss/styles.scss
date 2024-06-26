@@ -1,7 +1,7 @@
 /* Variables */
 $primary-color: #9C1F4D;
 $background-color: rgba(245, 245, 245, 0.8);
-$main-height: calc(100vh - 100px);
+$main-height: calc(100vh - 300px);
 $font-sans-serif: "Afacad", sans-serif;
 $font-serif: "Kaisei Decol", serif;
 
@@ -285,7 +285,7 @@ a{
             font-size: 1.2em;
         }
 
-        h4 {
+        h2 {
             font-family: $font-sans-serif;
             font-weight: lighter;
             font-size: 1.2em;
@@ -299,9 +299,10 @@ a{
         margin: auto;
 
         img {
-            width: 70%;
+            display: block;
+            margin: auto;
+            height: 100px;
             line-height: 0%;
-            justify-content: center; /* (No entiendo por qué no se centran las imágenes) */
         }
 
         h3 {
@@ -504,18 +505,23 @@ footer {
 
 /* desktop PROYECTO */
     .esposas {
+        height: auto;
         .ficha, 
         .laureles {
+            width: 100%;
             height: auto;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            flex-wrap: wrap;
             margin: auto;
             margin-bottom: 30px;
 
-            img {
-                width: 150px;
-            } 
+            .festival {
+                justify-content: center;
+                width: 30%;
+                margin: 20px 0;
+            }
         } 
 }
 
@@ -523,6 +529,8 @@ footer {
     footer {
         height: 300px;
         width: 100%;
+        position: relative;
+        bottom: 0;
         font-size: 1em;
         margin: auto;
         display: flex;
