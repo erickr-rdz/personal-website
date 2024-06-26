@@ -293,7 +293,7 @@ a:visited {
 footer {
   width: 100%;
   position: relative;
-  height: calc(100vh - 300px);
+  height: 100vh;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -462,11 +462,13 @@ footer .legal {
     height: 300px;
     width: 100%;
     position: relative;
-    bottom: 0;
+    bottom: -300px;
     font-size: 1em;
     margin: auto;
     display: flex;
     flex-direction: row;
+    background-color: #000;
+    color: #fff;
   }
   footer .content {
     width: 30vw;
@@ -477,6 +479,11 @@ footer .legal {
     border: none;
     justify-content: left;
   }
+  footer fieldset input,
+  footer fieldset textarea {
+    background-color: transparent;
+    color: #fff;
+  }
   footer .rrss {
     width: 30vw;
     margin: auto;
@@ -484,11 +491,24 @@ footer .legal {
   }
   footer .rrss img {
     height: 30px;
+    filter: invert(1);
   }
   footer .legal {
     width: 30vw;
     margin: auto;
     align-items: center;
+  }
+  footer .legal a:link {
+    text-decoration: none;
+  }
+  footer .legal a:visited {
+    text-decoration: none;
+  }
+  footer .legal a:hover {
+    text-decoration: underline;
+  }
+  footer .legal a:active {
+    text-decoration: underline;
   }
 }
 

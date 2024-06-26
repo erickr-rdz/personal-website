@@ -117,7 +117,7 @@ main {
     position: relative;
 
     .titulo {
-        h1{
+        h1 {
             font-size: 3em;
             font-weight: lighter;
             text-align: center;
@@ -161,13 +161,13 @@ button {
     cursor: pointer;
     font-weight: 500;
 
-    &:hover{
+    &:hover {
         background-color: $primary-color;
         color: white;
     }
 }
 
-a{
+a {
     text-decoration: none;
 
     &:visited {
@@ -330,7 +330,7 @@ a{
 footer {
     width: 100%;
     position: relative;
-    height: $main-height;
+    height: 100vh;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -340,44 +340,44 @@ footer {
     font-size: 1em;
 
     .content {
-            width: 90%;
-            align-content: center;
-    
-            form {
-                fieldset {
-                    border: none;
-    
-                    input,
-                    textarea {
-                        width: 100%;
-                        border-style: none none solid none;
-                        border-width: 1px;
-                        text-decoration: none;
-                        margin: 5px 0;
-                        padding: 5px 0;
-                    }
-    
-                    input[type=submit] {
-                        margin: auto;
-                        padding: 8px 16px;
-                        text-align: center;
-                        display: block;
-                        transition-duration: 0.4s;
-                        color: $primary-color;
-                        background-color: transparent;
-                        border: 2px solid $primary-color;
-                        border-radius: 32px;
-                        cursor: pointer;
-                        font-weight: 500;
-    
-                        &:hover {
-                            background-color: $primary-color;
-                            color: white;
-                        }
+        width: 90%;
+        align-content: center;
+
+        form {
+            fieldset {
+                border: none;
+
+                input,
+                textarea {
+                    width: 100%;
+                    border-style: none none solid none;
+                    border-width: 1px;
+                    text-decoration: none;
+                    margin: 5px 0;
+                    padding: 5px 0;
+                }
+
+                input[type=submit] {
+                    margin: auto;
+                    padding: 8px 16px;
+                    text-align: center;
+                    display: block;
+                    transition-duration: 0.4s;
+                    color: $primary-color;
+                    background-color: transparent;
+                    border: 2px solid $primary-color;
+                    border-radius: 32px;
+                    cursor: pointer;
+                    font-weight: 500;
+
+                    &:hover {
+                        background-color: $primary-color;
+                        color: white;
                     }
                 }
             }
         }
+    }
 
     .rrss {
         width: 100%;
@@ -397,7 +397,8 @@ footer {
 
 /* Media Queries para computadoras de escritorio */
 @media (min-width: 1024px) {
-/* desktop HEADER */
+
+    /* desktop HEADER */
     header {
         position: fixed;
         width: 100%;
@@ -456,7 +457,7 @@ footer {
         border-radius: 0 20px 20px 0;
     }
 
-/* desktop MAIN */
+    /* desktop MAIN */
     main {
         top: 100px;
         margin: auto;
@@ -464,7 +465,7 @@ footer {
         height: $main-height;
     }
 
-/* desktop HOME */
+    /* desktop HOME */
     #erickrdz {
         font-size: 7em;
     }
@@ -473,7 +474,7 @@ footer {
         font-size: 1.8em;
     }
 
-/* desktop SOBRE MI */
+    /* desktop SOBRE MI */
     .aboutme {
         display: grid;
         grid-template-columns: 50% 50%;
@@ -487,7 +488,7 @@ footer {
             align-content: center;
         }
 
-        .foto{
+        .foto {
             grid-area: foto;
         }
 
@@ -498,15 +499,16 @@ footer {
         }
     }
 
-/* desktop PORTAFOLIO and LAB */
+    /* desktop PORTAFOLIO and LAB */
     .gallery {
         grid-template-columns: repeat(3, 1fr);
     }
 
-/* desktop PROYECTO */
+    /* desktop PROYECTO */
     .esposas {
         height: auto;
-        .ficha, 
+
+        .ficha,
         .laureles {
             width: 100%;
             height: auto;
@@ -522,20 +524,22 @@ footer {
                 width: 30%;
                 margin: 20px 0;
             }
-        } 
-}
+        }
+    }
 
-/* desktop FOOTER */
+    /* desktop FOOTER */
     footer {
         height: 300px;
         width: 100%;
         position: relative;
-        bottom: 0;
+        bottom: -300px;
         font-size: 1em;
         margin: auto;
         display: flex;
         flex-direction: row;
-    
+        background-color: #000;
+        color: #fff;
+
         .content {
             width: 30vw;
         }
@@ -545,6 +549,12 @@ footer {
             margin: auto;
             border: none;
             justify-content: left;
+
+            input,
+            textarea {
+                background-color: transparent;
+                color: #fff;
+            }
         }
 
         .rrss {
@@ -554,6 +564,7 @@ footer {
 
             img {
                 height: 30px;
+                filter: invert(1);
             }
         }
 
@@ -561,6 +572,22 @@ footer {
             width: 30vw;
             margin: auto;
             align-items: center;
+
+            a:link {
+                text-decoration: none;
+            }
+
+            a:visited {
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            a:active {
+                text-decoration: underline;
+            }
         }
     }
 }
