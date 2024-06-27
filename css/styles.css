@@ -483,6 +483,9 @@ footer .legal {
 .avisoPrivacidad {
   height: auto;
 }
+.avisoPrivacidad h2 {
+  margin-top: 2em;
+}
 
 /* Estilos base para dispositivos móviles (mobile-first) */
 html,
