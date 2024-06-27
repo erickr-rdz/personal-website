@@ -1,0 +1,51 @@
+/* mobile MAIN */
+main {
+    width: 100%;
+    margin: auto;
+    align-content: center;
+    justify-content: center;
+    height: auto;
+    padding: 20px;
+    position: relative;
+
+    .titulo {
+        h1 {
+            font-size: 3em;
+            font-weight: lighter;
+            text-align: center;
+        }
+    }
+
+    p {
+        font-family: $font-sans-serif;
+        font-weight: lighter;
+        text-align: justify;
+        font-size: 1.2em;
+    }
+
+    ul {
+        font-family: $font-sans-serif;
+    }
+
+    li::marker {
+        color: $primary-color
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    span {
+        font-weight: bold;
+    }
+}
+
+/* desktop MAIN */
+@media (min-width: 1024px) {    
+    main {
+        top: 100px;
+        margin: auto;
+        width: 70%;
+        height: $main-height;
+    }
+}

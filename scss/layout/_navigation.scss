@@ -1,0 +1,115 @@
+/* mobile MENU */
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    font-family: $font-sans-serif;
+    margin: auto;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    transition-duration: 0.4s;
+    color: $primary-color;
+    background-color: transparent;
+    border: 2px solid $primary-color;
+    border-radius: 32px;
+    cursor: pointer;
+}
+
+#menu {
+    background-color: $background-color;
+    backdrop-filter: blur(5px);
+    text-transform: uppercase;
+    font-size: 2em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-sans-serif;
+    font-weight: 500;
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        li {
+            margin: 2px 0;
+
+            a {
+                text-decoration: none;
+                padding: 10px;
+                display: inline-block;
+                color: $primary-color;
+                margin: 20px;
+
+                &:hover {
+                    background-color: $primary-color;
+                    color: white;
+                    transition-duration: 0.4s;
+                }
+            }
+        }
+    }
+}
+
+#menu-toggle:checked+label+#menu {
+    display: flex;
+}
+
+/* desktop MENU */
+@media (min-width: 1024px) {
+    .menu-icon {
+        display: none;
+    }
+
+    #menu {
+        background: none;
+        backdrop-filter: none;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        font-size: 0.8em;
+
+        ul {
+            flex-direction: row;
+            justify-content: center;
+            padding: auto;
+            margin: auto;
+
+            li {
+                margin: 0;
+
+                a {
+                    display: inline-flex;
+                    padding: 5px 50px;
+                    margin: 0;
+                    color: $primary-color;
+                    border-color: $primary-color;
+                    border-width: 2px;
+                    border-style: solid;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    #menuHome {
+        border-radius: 20px 0 0 20px;
+    }
+
+    #menuAboutme {
+        border-radius: 0 20px 20px 0;
+    }
+}

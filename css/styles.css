@@ -1,22 +1,5 @@
 @charset "UTF-8";
 /* Variables */
-/* Estilos base para dispositivos móviles (mobile-first) */
-html,
-body {
-  box-sizing: border-box;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  font-family: "Kaisei Decol", serif;
-  background-color: transparent;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
 /* mobile HEADER */
 header {
   z-index: 1000;
@@ -33,6 +16,22 @@ header {
   background-image: linear-gradient(white, transparent);
 }
 
+/* desktop HEADER */
+@media (min-width: 1024px) {
+  header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    align-content: center;
+    margin: auto;
+    top: 0;
+    background-image: linear-gradient(white, white, transparent);
+  }
+  header h1 {
+    margin: 0;
+  }
+}
+/* mobile MENU */
 #menu-toggle {
   display: none;
 }
@@ -97,6 +96,46 @@ header {
   display: flex;
 }
 
+/* desktop MENU */
+@media (min-width: 1024px) {
+  .menu-icon {
+    display: none;
+  }
+  #menu {
+    background: none;
+    backdrop-filter: none;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    font-size: 0.8em;
+  }
+  #menu ul {
+    flex-direction: row;
+    justify-content: center;
+    padding: auto;
+    margin: auto;
+  }
+  #menu ul li {
+    margin: 0;
+  }
+  #menu ul li a {
+    display: inline-flex;
+    padding: 5px 50px;
+    margin: 0;
+    color: #9C1F4D;
+    border-color: #9C1F4D;
+    border-width: 2px;
+    border-style: solid;
+    text-decoration: none;
+  }
+  #menuHome {
+    border-radius: 20px 0 0 20px;
+  }
+  #menuAboutme {
+    border-radius: 0 20px 20px 0;
+  }
+}
 /* mobile MAIN */
 main {
   width: 100%;
@@ -131,52 +170,16 @@ main span {
   font-weight: bold;
 }
 
-button {
-  margin: auto;
-  padding: 8px 16px;
-  text-align: center;
-  display: block;
-  transition-duration: 0.4s;
-  color: #9C1F4D;
-  background-color: transparent;
-  border: 2px solid #9C1F4D;
-  border-radius: 32px;
-  cursor: pointer;
-  font-weight: 500;
+/* desktop MAIN */
+@media (min-width: 1024px) {
+  main {
+    top: 100px;
+    margin: auto;
+    width: 70%;
+    height: calc(100vh - 300px);
+  }
 }
-button:hover {
-  background-color: #9C1F4D;
-  color: white;
-}
-
-a {
-  text-decoration: none;
-}
-a:visited {
-  text-decoration: none;
-}
-
-/* mobile HOME */
-.index {
-  height: calc(100vh - 300px);
-}
-
-#erickrdz {
-  text-align: center;
-  font-family: "Kaisei Decol", serif;
-  font-size: 4em;
-  font-weight: 100;
-  line-height: 0%;
-}
-
-#firma {
-  text-align: center;
-  font-family: "Afacad", sans-serif;
-  font-size: 1.2em;
-  font-weight: 100;
-}
-
-/* mobile PORTAFOLIO and LAB */
+/* mobile GALLERY */
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
@@ -199,96 +202,12 @@ a:visited {
   display: block;
 }
 
-/* mobile SOBRE MI */
-.aboutme {
-  display: flex;
-  flex-flow: column;
-  padding: 20px;
+/* desktop GALLERY */
+@media (min-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
-.aboutme p {
-  font-family: "Afacad", sans-serif;
-  font-weight: lighter;
-  text-align: justify;
-  font-size: 1.2em;
-}
-.aboutme .foto {
-  grid-area: foto;
-  align-content: center;
-}
-.aboutme .foto img {
-  max-width: 100%;
-  height: auto;
-}
-.aboutme .cita {
-  font-style: italic;
-  column-span: all;
-  text-align: center;
-}
-
-/* mobile PROYECTO */
-.esposas .stills {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-}
-.esposas .stills img {
-  width: 100%;
-}
-.esposas p {
-  padding: 30px;
-  font-family: "Afacad", sans-serif;
-  font-weight: lighter;
-  text-align: justify;
-  font-size: 1.3em;
-}
-.esposas .ficha {
-  height: 100vh;
-  align-content: center;
-}
-.esposas .ficha .info {
-  text-align: center;
-  padding: 5px;
-}
-.esposas .ficha h3 {
-  font-family: "Afacad", sans-serif;
-  font-weight: 600;
-  font-size: 1.2em;
-}
-.esposas .ficha h2 {
-  font-family: "Afacad", sans-serif;
-  font-weight: lighter;
-  font-size: 1.2em;
-  line-height: 0%;
-}
-.esposas .laureles {
-  width: 80vw;
-  justify-content: center;
-  margin: auto;
-}
-.esposas .laureles img {
-  display: block;
-  margin: auto;
-  height: 100px;
-  line-height: 0%;
-}
-.esposas .laureles h3 {
-  font-family: "Afacad", sans-serif;
-  font-weight: 600;
-  font-size: 1em;
-  text-align: center;
-}
-.esposas .laureles h4 {
-  font-family: "Afacad", sans-serif;
-  font-weight: lighter;
-  font-size: 1em;
-  text-align: center;
-}
-
-/* mobile AVISO */
-.avisoPrivacidad {
-  height: auto;
-}
-
 /* mobile FOOTER */
 footer {
   width: 100%;
@@ -348,116 +267,8 @@ footer .legal {
   align-content: center;
 }
 
-/* Media Queries para computadoras de escritorio */
+/* desktop FOOTER */
 @media (min-width: 1024px) {
-  /* desktop HEADER */
-  header {
-    position: fixed;
-    width: 100%;
-    height: 100px;
-    align-content: center;
-    margin: auto;
-    top: 0;
-    background-image: linear-gradient(white, white, transparent);
-  }
-  header h1 {
-    margin: 0;
-  }
-  .menu-icon {
-    display: none;
-  }
-  #menu {
-    background: none;
-    backdrop-filter: none;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    height: auto;
-    font-size: 0.8em;
-  }
-  #menu ul {
-    flex-direction: row;
-    justify-content: center;
-    padding: auto;
-    margin: auto;
-  }
-  #menu ul li {
-    margin: 0;
-  }
-  #menu ul li a {
-    display: inline-flex;
-    padding: 5px 50px;
-    margin: 0;
-    color: #9C1F4D;
-    border-color: #9C1F4D;
-    border-width: 2px;
-    border-style: solid;
-    text-decoration: none;
-  }
-  #menuHome {
-    border-radius: 20px 0 0 20px;
-  }
-  #menuAboutme {
-    border-radius: 0 20px 20px 0;
-  }
-  /* desktop MAIN */
-  main {
-    top: 100px;
-    margin: auto;
-    width: 70%;
-    height: calc(100vh - 300px);
-  }
-  /* desktop HOME */
-  #erickrdz {
-    font-size: 7em;
-  }
-  #firma {
-    font-size: 1.8em;
-  }
-  /* desktop SOBRE MI */
-  .aboutme {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-areas: "bio foto" ". ." "cita cita";
-  }
-  .aboutme .bio {
-    grid-area: bio;
-    align-content: center;
-  }
-  .aboutme .foto {
-    grid-area: foto;
-  }
-  .aboutme .cita {
-    grid-area: cita;
-    padding: 30px;
-    align-content: center;
-  }
-  /* desktop PORTAFOLIO and LAB */
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  /* desktop PROYECTO */
-  .esposas {
-    height: auto;
-  }
-  .esposas .ficha,
-  .esposas .laureles {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: auto;
-    margin-bottom: 30px;
-  }
-  .esposas .ficha .festival,
-  .esposas .laureles .festival {
-    justify-content: center;
-    width: 30%;
-    margin: 20px 0;
-  }
-  /* desktop FOOTER */
   footer {
     height: 300px;
     width: 100%;
@@ -510,6 +321,209 @@ footer .legal {
   footer .legal a:active {
     text-decoration: underline;
   }
+}
+/* mobile HOME */
+.index {
+  height: calc(100vh - 100px);
+}
+
+#erickrdz {
+  text-align: center;
+  font-family: "Kaisei Decol", serif;
+  font-size: 4em;
+  font-weight: 100;
+  line-height: 0%;
+}
+
+#firma {
+  text-align: center;
+  font-family: "Afacad", sans-serif;
+  font-size: 1.2em;
+  font-weight: 100;
+}
+
+/* desktop HOME */
+@media (min-width: 1024px) {
+  #erickrdz {
+    font-size: 7em;
+  }
+  #firma {
+    font-size: 1.8em;
+  }
+}
+/* mobile SOBRE MI */
+.aboutme {
+  display: flex;
+  flex-flow: column;
+  padding: 20px;
+}
+.aboutme p {
+  font-family: "Afacad", sans-serif;
+  font-weight: lighter;
+  text-align: justify;
+  font-size: 1.2em;
+}
+.aboutme .foto {
+  grid-area: foto;
+  align-content: center;
+}
+.aboutme .foto img {
+  max-width: 100%;
+  height: auto;
+}
+.aboutme .cita {
+  font-style: italic;
+  column-span: all;
+  text-align: center;
+}
+
+/* desktop SOBRE MI */
+@media (min-width: 1024px) {
+  .aboutme {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "bio foto" ". ." "cita cita";
+  }
+  .aboutme .bio {
+    grid-area: bio;
+    align-content: center;
+  }
+  .aboutme .foto {
+    grid-area: foto;
+  }
+  .aboutme .cita {
+    grid-area: cita;
+    padding: 30px;
+    align-content: center;
+  }
+}
+/* mobile PROYECTO */
+.esposas .stills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.esposas .stills img {
+  width: 100%;
+}
+.esposas p {
+  padding: 30px;
+  font-family: "Afacad", sans-serif;
+  font-weight: lighter;
+  text-align: justify;
+  font-size: 1.3em;
+}
+.esposas .ficha {
+  height: 100vh;
+  align-content: center;
+}
+.esposas .ficha .info {
+  text-align: center;
+  padding: 5px;
+}
+.esposas .ficha h3 {
+  font-family: "Afacad", sans-serif;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+.esposas .ficha h2 {
+  font-family: "Afacad", sans-serif;
+  font-weight: lighter;
+  font-size: 1.2em;
+  line-height: 0%;
+}
+.esposas .laureles {
+  width: 80vw;
+  justify-content: center;
+  margin: auto;
+}
+.esposas .laureles img {
+  display: block;
+  margin: auto;
+  height: 100px;
+  line-height: 0%;
+}
+.esposas .laureles h3 {
+  font-family: "Afacad", sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+  text-align: center;
+}
+.esposas .laureles h4 {
+  font-family: "Afacad", sans-serif;
+  font-weight: lighter;
+  font-size: 1em;
+  text-align: center;
+}
+
+/* desktop PROYECTO */
+@media (min-width: 1024px) {
+  .esposas {
+    height: auto;
+  }
+  .esposas .ficha,
+  .esposas .laureles {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  .esposas .ficha .festival,
+  .esposas .laureles .festival {
+    justify-content: center;
+    width: 30%;
+    margin: 20px 0;
+  }
+}
+/* mobile AVISO */
+.avisoPrivacidad {
+  height: auto;
+}
+
+/* Estilos base para dispositivos móviles (mobile-first) */
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "Kaisei Decol", serif;
+  background-color: transparent;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+button {
+  margin: auto;
+  padding: 8px 16px;
+  text-align: center;
+  display: block;
+  transition-duration: 0.4s;
+  color: #9C1F4D;
+  background-color: transparent;
+  border: 2px solid #9C1F4D;
+  border-radius: 32px;
+  cursor: pointer;
+  font-weight: 500;
+}
+button:hover {
+  background-color: #9C1F4D;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,31 @@
+/* mobile GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+
+    div {
+        background: #3a3f51;
+        border-radius: 5px;
+        overflow: hidden;
+        display: flex;
+        align-items: start;
+        justify-content: space-around;
+        height: max-content;
+
+        video,
+        img {
+            object-fit: contain;
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+}
+
+/* desktop GALLERY */
+@media (min-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

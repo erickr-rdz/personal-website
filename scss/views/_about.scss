@@ -1,0 +1,56 @@
+/* mobile SOBRE MI */
+.aboutme {
+    display: flex;
+    flex-flow: column;
+    padding: 20px;
+
+    p {
+        font-family: $font-sans-serif;
+        font-weight: lighter;
+        text-align: justify;
+        font-size: 1.2em;
+    }
+
+    .foto {
+        grid-area: foto;
+        align-content: center;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .cita {
+        font-style: italic;
+        column-span: all;
+        text-align: center;
+    }
+}
+
+/* desktop SOBRE MI */
+@media (min-width: 1024px) {
+    .aboutme {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+            "bio foto"
+            ". ."
+            "cita cita";
+
+        .bio {
+            grid-area: bio;
+            align-content: center;
+        }
+
+        .foto {
+            grid-area: foto;
+        }
+
+        .cita {
+            grid-area: cita;
+            padding: 30px;
+            align-content: center;
+        }
+    }
+}
